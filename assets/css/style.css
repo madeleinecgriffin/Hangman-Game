@@ -1,0 +1,59 @@
+
+
+/*the container DIV*/
+#clickMe { 
+	margin: 0; 
+	padding: 0; 
+	width: 100%; 
+	height: 600px;
+}
+
+/*the game title DIV*/
+#header {
+	text-align: center;
+}
+
+/*placeholder DIVS to help center the game*/
+.margin {
+	width: 33%;
+	height: auto;
+	float: left;
+	min-height: 1px;
+}
+
+/*DIV that contains the entire game screen*/
+#gameZone {
+	width: 33%;
+	height: auto;
+	float: left;
+	margin-top: 100px;
+}
+
+/*DIV that contains the current word*/
+#wordDisplay {
+	width: 33%;
+	height: auto;
+	float: left;
+	min-height: 1px;
+	text-align: center;
+}
+
+/*DIVs containing other elements of the game*/
+.gameDisplay {
+	width: 100%;
+	height: auto;
+	float: left;
+	padding: 10px 10px 10px 10px;
+	border-top: solid black 1px;
+	border-left: solid black 1px;
+	border-right: solid black 1px;
+}
+#bottom {
+	border-bottom: solid black 1px;
+}
+
+/*DIVs inside game elements holding changing scores*/
+.scores {
+	float: left;
+	padding: 2px 2px 2px 2px;
+}
