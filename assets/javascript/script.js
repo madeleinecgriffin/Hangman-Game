@@ -1,5 +1,6 @@
 
-var randomWords = ['rock', 'paper', 'scissors'];
+var randomWords = ['kanto', 'johto', 'suicune', 'pikachu', 'badges', 
+'goldenrod', 'espeon', 'chikorita', 'cyndaquil', 'totodile', 'pokemon', 'crystal'];
 
 var alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 
 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 
@@ -37,7 +38,7 @@ function startGame() {
 	}
 	var dashesArr = dashes.split('');
 	var displayDashes = document.getElementById("wordDisplay");
-	displayDashes.innerHTML=dashes;
+	displayDashes.innerHTML=dashesArr;
 
 	//starts function when user clicks a letter
 	document.onkeyup = function(event) {
@@ -49,7 +50,6 @@ function startGame() {
       }
       else {
       	alert('Please guess a letter');
-      	return;
       }
 
       //if this a repeat guess, do not count
@@ -81,7 +81,9 @@ function startGame() {
       	var displayChosen = document.getElementById("wordDisplay");
       	displayChosen.innerHTML=dashesArr;
       } else {
-      	wins++;
+      	wins = wins + 1;
+      	var displayWins = document.getElementById("gameWins");
+      	displayWins.innerHTML= " " + wins;
       	var displayChosen = document.getElementById("wordDisplay");
       	displayChosen.innerHTML='You win! Click anywhere to play again.';
       	return;
@@ -100,8 +102,6 @@ function startGame() {
       //updates the game display with new scores
       var displayRemain = document.getElementById("numberGuess");
       displayRemain.innerHTML= " " + guessesRemain;
-      var displayWins = document.getElementById("gameWins");
-      displayWins.innerHTML= " " + wins;
       var displayGuesses = document.getElementById("lettersGuess");
       displayGuesses.innerHTML= " " + lettersGuessed;
   }
