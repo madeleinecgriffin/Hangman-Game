@@ -36,7 +36,6 @@ body, html {
 	width: 33%;
 	height: auto;
 	float: left;
-	margin-top: 5px;
 	color: white;
 }
 
@@ -46,12 +45,14 @@ body, html {
 
 /*DIV that contains the current word*/
 #wordDisplay {
-	width: 33%;
+	width: 50%;
 	height: auto;
 	float: left;
 	min-height: 1px;
 	text-align: center;
+	padding-bottom: 30px;
 	color: white;
+	font-size: 20px;
 }
 
 /*DIVs containing other elements of the game*/
@@ -59,7 +60,7 @@ body, html {
 	width: 100%;
 	height: auto;
 	float: left;
-	padding: 10px 10px 10px 10px;
+	font-size: 20px;
 }
 
 
