@@ -14,6 +14,7 @@ var wins = 0;
 //when clickMe is clicked, start the game
 function startGame() {
 	console.log("working");
+      var game = 0;
 
 	//code to display remaining guesses
 	var guessesRemain = 12;
@@ -42,6 +43,11 @@ function startGame() {
 
 	//starts function when user clicks a letter
 	document.onkeyup = function(event) {
+
+      //check if game is already won or not and if it is, do not run
+      if (game == 1) {
+            return
+      }
 
       //makes sure the guess is a letter
       var userGuess = event.key.toLowerCase();
@@ -86,7 +92,8 @@ function startGame() {
       	displayWins.innerHTML= " " + wins;
       	var displayChosen = document.getElementById("wordDisplay");
       	displayChosen.innerHTML='You win! Click anywhere to play again.';
-      	return;
+      	game = 1;
+            return;
       }
 
 
@@ -96,14 +103,16 @@ function startGame() {
       	displayChosen.innerHTML='You lose! Click anywhere to play again.';
       	var displayRemain = document.getElementById("numberGuess");
       	displayRemain.innerHTML= " " + guessesRemain;
+            game = 1;
       	return;
       }
+      
 
       //updates the game display with new scores
       var displayRemain = document.getElementById("numberGuess");
       displayRemain.innerHTML= " " + guessesRemain;
       var displayGuesses = document.getElementById("lettersGuess");
       displayGuesses.innerHTML= " " + lettersGuessed;
-  }
+}
 
 }
